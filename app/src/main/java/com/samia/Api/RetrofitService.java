@@ -8,8 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService {
 
-    private static final String Base_Url="http://10.0.3.2/Samia/";
-    //private static final String Base_Url="https://cereals-tn.000webhostapp.com/Samia/";
+ //   private static final String Base_Url="http://10.0.3.2/Samia/";
+    private static final String Base_Url="https://samia-abidi.000webhostapp.com/Samia/";
     private static Retrofit retrofit;
 
 

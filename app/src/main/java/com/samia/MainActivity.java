@@ -13,10 +13,8 @@ import com.google.zxing.integration.android.IntentResult;
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+    protected void onResume() {
+        super.onResume();
         final Activity activity = this;
 
         IntentIntegrator integrator = new IntentIntegrator(activity);
@@ -26,6 +24,15 @@ public class MainActivity extends AppCompatActivity {
         integrator.setBeepEnabled(false);
         integrator.setBarcodeImageEnabled(false);
         integrator.initiateScan();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+
 
     }
         @Override
@@ -36,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    Toast.makeText(this, result.getContents(),Toast.LENGTH_LONG).show();
                 Intent i=new Intent(MainActivity.this,Details.class);
                 i.putExtra("CIN",result.getContents());
                 startActivity(i);
+                this.finish();
                 }
             }
             else {
