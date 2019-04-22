@@ -7,11 +7,13 @@ public class DataModel {
             simestreDeux,
             simestreTrois,
             caution,
-            id_etudiant;
+            id_etudiant,
+    photo;
 
-    public DataModel(String id, String cin, String num_bac, String nom, String naissance, String gouvernorat, String telephone, String email, String faculte, String date_inscription, String promotion_bac, String simetreUn, String simestreDeux, String simestreTrois, String caution, String id_etudiant) {
+    public DataModel(String photo,String id, String cin, String num_bac, String nom, String naissance, String gouvernorat, String telephone, String email, String faculte, String date_inscription, String promotion_bac, String simetreUn, String simestreDeux, String simestreTrois, String caution, String id_etudiant) {
         this.id = id;
         this.cin = cin;
+        this.photo=photo;
         this.num_bac = num_bac;
         this.nom = nom;
         this.naissance = naissance;
@@ -30,6 +32,10 @@ public class DataModel {
 
     public String getId() {
         return id;
+    }
+
+    public String getPhoto() {
+        return photo;
     }
 
     public String getSimetreUn() {
