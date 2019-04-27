@@ -9,11 +9,11 @@ public class DataModel {
             caution,
             id_etudiant,
     photo;
+    String bloc_chambre, num_chambre, etat, capacite;
 
-    public DataModel(String photo,String id, String cin, String num_bac, String nom, String naissance, String gouvernorat, String telephone, String email, String faculte, String date_inscription, String promotion_bac, String simetreUn, String simestreDeux, String simestreTrois, String caution, String id_etudiant) {
+    public DataModel(String id, String cin, String num_bac, String nom, String naissance, String gouvernorat, String telephone, String email, String faculte, String date_inscription, String promotion_bac, String simetreUn, String simestreDeux, String simestreTrois, String caution, String id_etudiant, String photo, String bloc_chambre, String num_chambre, String etat, String capacite) {
         this.id = id;
         this.cin = cin;
-        this.photo=photo;
         this.num_bac = num_bac;
         this.nom = nom;
         this.naissance = naissance;
@@ -28,6 +28,11 @@ public class DataModel {
         this.simestreTrois = simestreTrois;
         this.caution = caution;
         this.id_etudiant = id_etudiant;
+        this.photo = photo;
+        this.bloc_chambre = bloc_chambre;
+        this.num_chambre = num_chambre;
+        this.etat = etat;
+        this.capacite = capacite;
     }
 
     public String getId() {
@@ -88,6 +93,22 @@ public class DataModel {
 
     public String getFaculte() {
         return faculte;
+    }
+
+    public String getBloc_chambre() {
+        return bloc_chambre;
+    }
+
+    public String getNum_chambre() {
+        return num_chambre;
+    }
+
+    public String getEtat() {
+        return etat;
+    }
+
+    public String getCapacite() {
+        return capacite;
     }
 
     public String getDate_inscription() {
